@@ -213,28 +213,48 @@ Generates actionable response plans rather than only predictions.
 EventPulse-AI
 
 ├── app
+│   ├── __pycache__
+│   ├── emergency.py
+│   ├── geocode.py
 │   ├── main.py
+│   ├── mappls.py
 │   ├── predictor.py
 │   ├── recommender.py
-│   ├── emergency.py
-│   ├── mappls.py
 │   ├── schemas.py
+│   └── utils.py
+│
+├── data
+│   ├── Astram event data_anonymized.csv
+│   ├── cleaned_traffic_events.csv
+│   └── feature_engineered_events.csv
+│
+├── docs
+│   ├── api_design.md
+│   ├── architecture.md
+│   └── mvp_features.md
 │
 ├── frontend
 │   └── app.py
 │
 ├── models
-│   ├── random_forest.pkl
-│   └── feature_columns.pkl
+│   ├── feature_columns.pkl
+│   └── random_forest.pkl
 │
 ├── notebook
+│   ├── 01_EDA_Data_Cleaning.ipynb
+│   ├── 02_Feature_Engineering.ipynb
+│   ├── 03_Model_Development.ipynb
+│   ├── 04_Model_Comparison.ipynb
+│   └── 05_Recommendation_Engine.ipynb
 │
 ├── screenshots
 │
-├── docs
+├── venv
 │
+├── .env
+├── .gitignore
 ├── requirements.txt
-│
+├── test_mappls.py
 └── README.md
 ```
 
