@@ -187,7 +187,7 @@ if analyze:
 
     with st.spinner("Analyzing incident..."):
 
-    API_URL = "https://eventpulse-api-dpny.onrender.com"
+        API_URL = "https://eventpulse-api-dpny.onrender.com"
 
         response = requests.post(
             f"{API_URL}/predict",
