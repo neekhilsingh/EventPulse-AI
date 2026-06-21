@@ -187,7 +187,7 @@ if analyze:
 
     with st.spinner("Analyzing incident..."):
 
-        API_URL = "https://eventpulse-api-dpny.onrender.com"
+    API_URL = "https://eventpulse-api-dpny.onrender.com"
 
         response = requests.post(
             f"{API_URL}/predict",
@@ -195,8 +195,10 @@ if analyze:
             timeout=60
         )
 
-        st.write("Status Code:", response.status_code)
-        st.write("Response Text:", response.text)
+        if response.status_code != 200:
+            st.error(f"API Error ({response.status_code})")
+            st.code(response.text)
+            st.stop()
 
         result = response.json()
 

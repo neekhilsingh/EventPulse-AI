@@ -5,13 +5,23 @@ from app.predictor import predict_priority
 from app.recommender import generate_recommendation
 from app.mappls import reverse_geocode
 from app.emergency import get_emergency_resources
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="EventPulse-AI API",
     description="Traffic Event Priority Prediction API",
     version="1.0.0"
 )
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://eventpulse-ai-1-bspl.onrender.com",
+        "http://localhost:8501",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
