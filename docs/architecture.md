@@ -270,8 +270,9 @@ Random Forest Prediction
 
 # Project Structure
 
-```text
+# 📂 Project Structure
 
+```text
 EventPulse-AI
 ├── app
 │   ├── __pycache__
@@ -315,8 +316,6 @@ EventPulse-AI
 │   ├── Interactive_Map.png
 │   └── Prediction.png
 │
-├── venv
-│
 ├── .env
 ├── .gitignore
 ├── Procfile
@@ -324,8 +323,8 @@ EventPulse-AI
 ├── requirements.txt
 ├── runtime.txt
 └── test_mappls.py
-
 ```
+
 
 ---
 
