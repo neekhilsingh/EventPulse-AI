@@ -271,8 +271,8 @@ Random Forest Prediction
 # Project Structure
 
 ```text
-EventPulse-AI
 
+EventPulse-AI
 ├── app
 │   ├── __pycache__
 │   ├── emergency.py
@@ -309,14 +309,22 @@ EventPulse-AI
 │   └── 05_Recommendation_Engine.ipynb
 │
 ├── screenshots
+│   ├── AI_Recommendation.png
+│   ├── Dashboard.png
+│   ├── Emergency_Resource.png
+│   ├── Interactive_Map.png
+│   └── Prediction.png
 │
 ├── venv
 │
 ├── .env
 ├── .gitignore
+├── Procfile
+├── README.md
 ├── requirements.txt
-├── test_mappls.py
-└── README.md
+├── runtime.txt
+└── test_mappls.py
+
 ```
 
 ---
