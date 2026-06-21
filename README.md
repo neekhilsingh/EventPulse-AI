@@ -363,6 +363,32 @@ Create a `.env` file in the project root:
 ```env
 MAPPLS_API_KEY=YOUR_MAPPLS_API_KEY
 ```
+---
+
+# 🔑 Getting a Mappls API Key
+
+EventPulse-AI uses the **Mappls Reverse Geocoding API** to convert incident coordinates into human-readable addresses.
+
+Follow these steps to obtain your API key:
+
+1. Visit the Mappls Developer Portal:
+   https://developer.mappls.com/
+
+2. Sign in or create a free developer account.
+
+3. Create a new application from the dashboard.
+
+4. Enable the **Reverse Geocoding API** for your application.
+
+5. Copy the generated API key (Static Key).
+
+6. Create a `.env` file in the project root and add:
+
+```env
+MAPPLS_API_KEY=YOUR_MAPPLS_API_KEY
+```
+
+Restart the backend after updating the `.env` file.
 
 ---
 
