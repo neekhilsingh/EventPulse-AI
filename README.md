@@ -2,7 +2,15 @@
 
 > **Predict. Prepare. Prevent.**
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-red?logo=streamlit)](https://eventpulse-ai.streamlit.app/)
+[![Backend API](https://img.shields.io/badge/API-Render-blue?logo=render)](https://eventpulse-api-dpny.onrender.com/)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-Hackathon-success)]()
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/neekhilsingh/EventPulse-AI)
+
 An AI-powered Traffic Incident Management System that predicts the priority of traffic incidents, recommends intelligent response strategies, allocates nearby emergency resources, and visualizes incidents through an interactive dashboard.
+
+⭐ If you like this project, consider giving it a star on GitHub!
 
 ---
 
@@ -20,16 +28,13 @@ An AI-powered Traffic Incident Management System that predicts the priority of t
 # 🌐 Live Demo
 
 ### 🚀 Streamlit Dashboard
-
-https://eventpulse-ai.streamlit.app/
+👉 <https://eventpulse-ai.streamlit.app>
 
 ### ⚡ FastAPI Backend
-
-https://eventpulse-api-dpny.onrender.com/
+👉 <https://eventpulse-api-dpny.onrender.com>
 
 ### 📖 API Documentation
-
-https://eventpulse-api-dpny.onrender.com/docs
+👉 <https://eventpulse-api-dpny.onrender.com/docs>
 
 ---
 # 📖 Overview
@@ -71,7 +76,7 @@ Generates intelligent response plans including:
 
 Integrated with **Mappls APIs**
 
-Automatically converts latitude and longitude into human-readable addresses.
+Automatically converts geographic coordinates into human-readable addresses using the Mappls Reverse Geocoding API.
 
 Example:
 
@@ -149,6 +154,7 @@ Random Forest   Recommendation   Mappls API
 
           AI Decision Dashboard
 ```
+Detailed architecture documentation is available in `docs/architecture.md`
 
 ---
 
@@ -205,6 +211,7 @@ A rule-based operational decision engine built on top of machine learning predic
 ### APIs
 
 - Mappls Reverse Geocoding API
+- REST APIs (FastAPI)
 
 ### Visualization
 
@@ -218,13 +225,31 @@ A rule-based operational decision engine built on top of machine learning predic
 
 ---
 
+# 🔌 API Design
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | / | Health Check |
+| POST | /predict | Predict incident priority and generate AI recommendations |
+
+Detailed API documentation is available in `docs/api_design.md`.
+
+---
+
+# 📈 Results
+
+- Model: Random Forest Classifier
+- Priority Classification: High / Low
+- Confidence Score Returned for Every Prediction
+- Integrated End-to-End AI Decision Support Pipeline
+- Successfully Deployed on Render and Streamlit Cloud
+
+---
+
 # 📂 Project Structure
 
-```
+```text
 EventPulse-AI
-
-EventPulse-AI
-
 ├── app
 │   ├── __pycache__
 │   ├── emergency.py
@@ -267,8 +292,6 @@ EventPulse-AI
 │   ├── Interactive_Map.png
 │   └── Prediction.png
 │
-├── venv
-│
 ├── .env
 ├── .gitignore
 ├── Procfile
@@ -277,6 +300,7 @@ EventPulse-AI
 ├── runtime.txt
 └── test_mappls.py
 ```
+
 
 ---
 
@@ -314,9 +338,17 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
+Create a `.env` file in the project root:
+
+```env
+MAPPLS_API_KEY=YOUR_MAPPLS_API_KEY
+```
+
 ---
 
-# ▶ Run Backend
+# 💻 Run Locally
+
+## Start Backend
 
 ```bash
 uvicorn app.main:app --reload
@@ -336,11 +368,28 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# ▶ Run Frontend
+## Start Frontend
 
 ```bash
 streamlit run frontend/app.py
 ```
+
+Frontend
+
+```
+http://localhost:8501
+```
+
+---
+
+# ☁ Deployment
+
+| Service | Platform |
+|----------|----------|
+| Frontend | Streamlit Community Cloud |
+| Backend | Render |
+| ML Model | Joblib (.pkl) |
+| Reverse Geocoding | Mappls API |
 
 ---
 # 📸 Screenshots
@@ -384,6 +433,9 @@ EventPulse-AI enables authorities to:
 ---
 
 # 🔮 Future Scope
+
+The architecture has been designed to support future integration with real-time traffic and smart city infrastructure.
+
 - Live Traffic API Integration
 - CCTV-based Incident Detection
 - GPS Vehicle Tracking
@@ -408,10 +460,14 @@ EventPulse-AI enables authorities to:
 
 # 📜 License
 
-This project was developed as part of a hackathon submission and is intended for educational and research purposes.
+This project was developed as part of the Flipkart Gridlock Hackathon 2.0 and is intended for educational, research, and demonstration purposes.
 
 ---
 
-# ⭐ EventPulse-AI
+# ⭐ Thank You
 
-### **Predict. Prepare. Prevent.**
+If you found this project interesting, consider giving the repository a ⭐.
+
+**EventPulse-AI**
+
+### Predict. Prepare. Prevent.
