@@ -2,7 +2,7 @@
 
 > **Predict. Prepare. Prevent.**
 
-An AI-powered Traffic Incident Management System that predicts the priority of traffic events, recommends emergency response strategies, allocates nearby resources, and visualizes incidents on an interactive dashboard.
+An AI-powered Traffic Incident Management System that predicts the priority of traffic incidents, recommends intelligent response strategies, allocates nearby emergency resources, and visualizes incidents through an interactive dashboard.
 
 ---
 
@@ -17,20 +17,28 @@ An AI-powered Traffic Incident Management System that predicts the priority of t
 
 ---
 
+# 🌐 Live Demo
+
+### 🚀 Streamlit Dashboard
+
+https://eventpulse-ai.streamlit.app/
+
+### ⚡ FastAPI Backend
+
+https://eventpulse-api-dpny.onrender.com/
+
+### 📖 API Documentation
+
+https://eventpulse-api-dpny.onrender.com/docs
+
+---
 # 📖 Overview
 
-Traffic incidents often lead to delayed emergency response, increased congestion, and inefficient resource utilization.
+Traffic incidents often result in delayed emergency response, increased congestion, and inefficient resource utilization.
 
-**EventPulse-AI** leverages Machine Learning and intelligent decision support to help traffic authorities:
+EventPulse-AI combines Machine Learning, intelligent recommendation systems, and geospatial intelligence to assist traffic authorities in making faster and more informed operational decisions.
 
-- Predict incident priority
-- Assess operational impact
-- Recommend response actions
-- Allocate emergency resources
-- Identify incident locations using reverse geocoding
-- Visualize incidents through an interactive dashboard
-
-Instead of relying solely on manual assessment, EventPulse-AI provides **AI-assisted operational decision support** for faster and more informed responses.
+The system predicts incident priority, estimates operational impact, recommends response strategies, identifies incident locations using reverse geocoding, allocates nearby emergency resources, and presents all insights through an interactive dashboard.
 
 ---
 
@@ -63,7 +71,7 @@ Generates intelligent response plans including:
 
 Integrated with **Mappls APIs**
 
-Automatically converts incident coordinates into readable addresses.
+Automatically converts latitude and longitude into human-readable addresses.
 
 Example:
 
@@ -110,13 +118,13 @@ Features include:
 
                     ▼
 
-          Streamlit Dashboard
+          Streamlit Cloud Dashboard
 
                     │
 
                     ▼
 
-             FastAPI Backend
+             FastAPI Backend (Render)
 
                     │
 
@@ -172,9 +180,7 @@ Reasons for selection:
 
 ## Recommendation Engine
 
-Rule-based operational recommendation engine built on top of ML predictions.
-
-Generates actionable response plans rather than only predictions.
+A rule-based operational decision engine built on top of machine learning predictions that generates actionable response plans instead of only predicting incident priority.
 
 ---
 
@@ -205,11 +211,18 @@ Generates actionable response plans rather than only predictions.
 - Streamlit
 - Pandas
 
+### Deployment
+
+- Render
+- Streamlit Community Cloud
+
 ---
 
 # 📂 Project Structure
 
 ```
+EventPulse-AI
+
 EventPulse-AI
 
 ├── app
@@ -248,14 +261,21 @@ EventPulse-AI
 │   └── 05_Recommendation_Engine.ipynb
 │
 ├── screenshots
+│   ├── AI_Recommendation.png
+│   ├── Dashboard.png
+│   ├── Emergency_Resource.png
+│   ├── Interactive_Map.png
+│   └── Prediction.png
 │
 ├── venv
 │
 ├── .env
 ├── .gitignore
+├── Procfile
+├── README.md
 ├── requirements.txt
-├── test_mappls.py
-└── README.md
+├── runtime.txt
+└── test_mappls.py
 ```
 
 ---
@@ -356,22 +376,23 @@ EventPulse-AI enables authorities to:
 
 - Improve emergency response time
 - Reduce traffic congestion
-- Optimize resource allocation
-- Assist operational decision-making
-- Enhance urban traffic management
+- Optimize emergency resource allocation
+- Support operational decision-making
+- Improve situational awareness
+- Enable AI-assisted traffic incident management
 
 ---
 
-# 🔮 Future Improvements
+# 🔮 Future Scope
 - Live Traffic API Integration
-- Real-time CCTV Analytics
-- GPS-based Incident Detection
-- Deep Learning Models
+- CCTV-based Incident Detection
+- GPS Vehicle Tracking
+- Deep Learning Prediction Models
 - Automatic Route Optimization
-- Live Emergency Vehicle Tracking
-- SMS & Push Notifications
-- Cloud Deployment
+- Emergency Vehicle Tracking
+- Push Notifications
 - Mobile Application
+- Smart City Integration
 
 ---
 
