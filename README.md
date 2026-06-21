@@ -246,6 +246,26 @@ Detailed API documentation is available in `docs/api_design.md`.
 
 ---
 
+## 🤖 Final Model Performance
+
+The production model used in EventPulse-AI is a **Random Forest Classifier**, selected for its strong balance between predictive performance and generalization.
+
+| Metric | Score |
+|---------|------:|
+| Accuracy | **89.17%** |
+| Precision | **87.17%** |
+| Recall | **96.62%** |
+| F1 Score | **91.65%** |
+
+### Why Random Forest?
+
+- High recall for critical traffic incidents
+- Strong balance between precision and recall
+- Less dependent on memorizing location-specific patterns
+- Robust and interpretable for real-world deployment
+
+---
+
 # 📂 Project Structure
 
 ```text
