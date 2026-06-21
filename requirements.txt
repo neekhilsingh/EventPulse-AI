@@ -10,3 +10,6 @@ pydantic
 matplotlib
 seaborn
 geopy
+gunicorn
+uvicorn
+python-dotenv
