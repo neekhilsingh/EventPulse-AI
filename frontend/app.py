@@ -191,10 +191,14 @@ if analyze:
 
         response = requests.post(
             f"{API_URL}/predict",
-            json=payload
+            json=payload,
+            timeout=60
         )
 
-    result=response.json()
+        st.write("Status Code:", response.status_code)
+        st.write("Response Text:", response.text)
+
+        result = response.json()
 
     rec=result["recommendation"]
     resources=result["resources"]

@@ -17,11 +17,26 @@ def reverse_geocode(lat, lng):
         "lng": lng
     }
 
-    response = requests.get(url, params=params)
+    try:
+        response = requests.get(url, params=params, timeout=20)
 
-    data = response.json()
+        print("Status:", response.status_code)
+        print("Raw Response:", response.text)
 
-    if data["responseCode"] == 200:
-        return data["results"][0]
+        data = response.json()
 
-    return {}
+        if data.get("responseCode") == 200:
+            return data["results"][0]
+
+        print("Mappls JSON:", data)
+
+        return {
+            "formatted_address": "Location unavailable"
+        }
+
+    except Exception as e:
+        print("Mappls Exception:", str(e))
+
+        return {
+            "formatted_address": "Location unavailable"
+        }
